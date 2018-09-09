@@ -12,7 +12,7 @@ if not (input_folder.endswith("/") or input_folder.endswith("\\")):
     input_folder += "/"
 while True:
     student_login = input("Enter student login \n")
-    list_of_files = glob.iglob(input_folder + "*.jpg")  # select all images from folder
+    list_of_files = glob.iglob(input_folder + "*.JPG")  # select all images from folder
     file_to_copy = max(list_of_files, key=os.path.getctime)
     copyfile(file_to_copy, out_folder + student_login + ".jpg")
     print("Copied " + file_to_copy + " to " +  out_folder + student_login + ".jpg")
